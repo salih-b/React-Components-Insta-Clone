@@ -4,6 +4,7 @@
 import React from "react";
 
 const LikeSection = props => {
+  console.log("like section", props);
   return (
     <div>
     <div
@@ -14,12 +15,11 @@ const LikeSection = props => {
         <i className="far fa-heart" />
       </div>
       <div className="like-section-wrapper">
-        <i className="far fa-comment" />
+        <i className="far fa-comment" onClick={props.addLikes}/>
       </div>
     </div>
     <p className="like-number">
-      
-      likes</p>
+      {props.likes} likes</p>
 </div>
   )
 };
